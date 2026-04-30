@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bergwall Law Firm, P.C. | Personal Injury Lawyer in Fairfield, NJ</title>
+  <meta name="description" content="Bergwall Law Firm, P.C. helps injury victims in Fairfield and across New Jersey pursue compensation after accidents, negligence, and serious injuries." />
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --blue: #1f5f9f;
+      --gold: #b99a5b;
+      --light: #f6f7f9;
+      --text: #1f2933;
+      --muted: #667085;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .topbar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 6%;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    header {
+      background: var(--white);
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo img { max-width: 340px; width: 100%; height: auto; display: block; }
+    nav { display: flex; gap: 24px; font-family: Arial, sans-serif; font-weight: 700; color: var(--navy); }
+    .hero {
+      min-height: 570px;
+      background: linear-gradient(90deg, rgba(11,31,58,.94), rgba(11,31,58,.72)), url('assets/logo.jpg');
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      padding: 70px 6%;
+    }
+    .hero-content { max-width: 780px; }
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.05; margin: 0 0 20px; }
+    .hero p { font-size: 21px; max-width: 650px; margin-bottom: 30px; }
+    .buttons { display: flex; gap: 16px; flex-wrap: wrap; font-family: Arial, sans-serif; }
+    .btn {
+      padding: 14px 22px;
+      border-radius: 4px;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .btn-primary { background: var(--gold); color: var(--navy); }
+    .btn-secondary { border: 1px solid rgba(255,255,255,.75); color: var(--white); }
+    section { padding: 72px 6%; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .section-title { text-align: center; margin-bottom: 42px; }
+    .section-title span { color: var(--gold); font-family: Arial, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; }
+    h2 { color: var(--navy); font-size: clamp(30px, 4vw, 44px); line-height: 1.15; margin: 8px 0 0; }
+    .about-grid { display: grid; grid-template-columns: 340px 1fr; gap: 46px; align-items: center; }
+    .attorney-card { background: var(--light); padding: 20px; border-left: 5px solid var(--gold); }
+    .attorney-card img { width: 100%; display: block; background: white; }
+    .attorney-card h3 { color: var(--navy); margin: 18px 0 4px; font-size: 26px; }
+    .muted { color: var(--muted); font-family: Arial, sans-serif; }
+    .about-text p { font-size: 18px; margin-top: 0; }
+    .practice { background: var(--light); }
+    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .card {
+      background: var(--white);
+      padding: 30px;
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 10px 25px rgba(0,0,0,.06);
+      min-height: 180px;
+    }
+    .card h3 { color: var(--navy); font-size: 24px; margin: 0 0 10px; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .why-box { padding: 28px; border: 1px solid #e5e7eb; }
+    .why-box strong { color: var(--navy); font-size: 21px; display: block; margin-bottom: 8px; }
+    .contact { background: var(--navy); color: var(--white); }
+    .contact h2 { color: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+    .info-box { background: rgba(255,255,255,.08); padding: 28px; border-left: 5px solid var(--gold); }
+    .info-box p { margin: 8px 0; font-size: 18px; }
+    form { background: var(--white); padding: 28px; border-radius: 4px; font-family: Arial, sans-serif; }
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 14px;
+      border: 1px solid #d0d5dd;
+      font: inherit;
+    }
+    textarea { min-height: 130px; resize: vertical; }
+    button { border: 0; cursor: pointer; width: 100%; font-size: 16px; }
+    footer { background: #071527; color: #cbd5e1; text-align: center; padding: 24px 6%; font-family: Arial, sans-serif; font-size: 14px; }
+    @media (max-width: 900px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav { flex-wrap: wrap; gap: 14px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .cards, .why-grid { grid-template-columns: 1fr; }
+      .hero { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div>165 Passaic Ave, Fairfield, NJ 07004</div>
+    <div><a href="tel:9732766100">(973) 276-6100</a></div>
+  </div>
+
+  <header>
+    <a class="logo" href="#home"><img src="assets/logo.jpg" alt="Bergwall Law Firm, P.C. logo"></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#practice">Practice Areas</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Fairfield, New Jersey Personal Injury Lawyer</div>
+        <h1>Injured in New Jersey? Get Trusted Legal Help.</h1>
+        <p>Bergwall Law Firm, P.C. represents accident and injury victims with focused, client driven legal support.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="tel:9732766100">Call Now</a>
+          <a class="btn btn-secondary" href="#contact">Request a Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="attorney-card">
+          <img src="assets/attorney.jpg" alt="Attorney at Bergwall Law Firm">
+          <h3>Attorney Profile</h3>
+          <div class="muted">Bergwall Law Firm, P.C.</div>
+        </div>
+        <div class="about-text">
+          <div class="eyebrow">About the Firm</div>
+          <h2>Personal injury representation built on trust, preparation, and results.</h2>
+          <p>Bergwall Law Firm, P.C. helps clients in Fairfield and throughout New Jersey after car accidents, slip and falls, workplace injuries, and other injury related matters.</p>
+          <p>After an injury, every client deserves clear communication, honest direction, and a legal team that takes their case seriously from the first consultation through resolution.</p>
+          <p class="muted">This section can be updated with a full attorney biography, education, admissions, personal injury experience, case results, and professional achievements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="practice" id="practice">
+      <div class="wrap">
+        <div class="section-title">
+          <span>Personal Injury Services</span>
+          <h2>Cases We Handle</h2>
+        </div>
+        <div class="cards">
+          <div class="card"><h3>Car Accidents</h3><p>Help after crashes involving negligent drivers, rideshares, trucks, or uninsured motorists.</p></div>
+          <div class="card"><h3>Slip & Fall Injuries</h3><p>Representation for injuries caused by unsafe property conditions, poor maintenance, or hazards.</p></div>
+          <div class="card"><h3>Workplace Injuries</h3><p>Guidance for injured workers seeking the support and compensation they may be entitled to.</p></div>
+          <div class="card"><h3>Serious Injury Claims</h3><p>Support for victims dealing with medical bills, lost wages, pain, and long term recovery.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="section-title">
+          <span>Why Choose Us</span>
+          <h2>A personal injury firm that puts clients first.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-box"><strong>Clear Communication</strong>Clients are kept informed and guided through every step of the injury claim process.</div>
+          <div class="why-box"><strong>Focused Strategy</strong>Every injury case is approached with preparation, detail, and practical planning.</div>
+          <div class="why-box"><strong>Local Experience</strong>Serving Fairfield and New Jersey injury victims with professional legal support.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h2>Speak with a personal injury lawyer today.</h2>
+          <div class="info-box">
+            <p><strong>Bergwall Law Firm, P.C.</strong></p>
+            <p>165 Passaic Ave, Fairfield, NJ 07004</p>
+            <p><a href="tel:9732766100">(973) 276-6100</a></p>
+          </div>
+        </div>
+        <form action="mailto:info@bergwalllaw.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <textarea name="message" placeholder="Tell us what happened" required></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Bergwall Law Firm, P.C. All rights reserved. This website is for informational purposes only and does not create an attorney client relationship.
+  </footer>
+</body>
+</html>
